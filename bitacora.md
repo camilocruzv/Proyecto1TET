@@ -1,0 +1,1 @@
+- En la primera semana empecé el MOOC sobre DevOps, aprendí REACT y creé la base principal del frontend con esta herramienta.

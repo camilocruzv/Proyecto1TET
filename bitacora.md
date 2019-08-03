@@ -1,1 +1,2 @@
 - En la primera semana empecé el MOOC sobre DevOps, aprendí REACT y creé la base principal del frontend con esta herramienta.
+- En la segunda semana implementé parte del backend de la aplicación (REST APIs) y parte del frontend

@@ -24,6 +24,16 @@ router.get('/', async (req, res) =>{
     res.json(tweets);
 });
 
+router.get('/:usuario', async (req, res) => {
+    const tweet = await Tweet.find({usuario: req.params.usuario});
+    res.json(tweet);
+});
+
+router.get('/search/:tweet', async (req, res) => {
+    const tweet1 = await Tweet.find({tweet: {$regex : '.*' + '#' + req.params.tweet + '.*'}});
+    res.json(tweet1);
+});
+
 router.get('/:id', async (req, res) => {
     const tweet = await Tweet.findById(req.params.id);
     res.json(tweet);

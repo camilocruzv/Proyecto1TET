@@ -8,7 +8,8 @@ class App extends Component {
             usuario: '',
             tweet: '',
             tweets: [],
-            _id: ''
+            _id: '',
+            buscar: ''
         };
         this.handleChange = this.handleChange.bind(this);
         this.addTweet = this.addTweet.bind(this);
@@ -114,9 +115,23 @@ class App extends Component {
                     </div>
                 </nav>
 
+                <br />
+
                 <div className="container">
                     <div className="row">
                         <div className="col s12">
+                            <form>
+                                <div className="row">
+                                    <div className="input-field col l4 offset-l4">
+                                        <input id="buscar" name="buscar" onChange={this.handleChange} type="text" className="materialize-textarea" value={this.state.buscar}></input>
+                                        <label htmlFor="buscar">Buscar</label>
+                                    </div>
+                                    <div className="input-field col l4">
+                                        <button className="btn light-blue darken-4" type="submit">Buscar</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <br /><br />
                             <div className="card">
                                 <div className="card-content">
                                     <form onSubmit={this.addTweet}>

@@ -1,9 +1,8 @@
-const mongoose = require('mongoose');
-const { Schema } = mongoose;
+const { Schema, model } = require('mongoose');
 
 const Tweet = new Schema({
     usuario: { type: String, required: true },
     tweet: { type: String, required: true }
 });
 
-module.exports = mongoose.model('Tweet', Tweet);
+module.exports = model('Tweet', Tweet);
